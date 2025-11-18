@@ -54,7 +54,7 @@ Las contribuciones son bienvenidas. Por favor, abre un issue para discutir lo qu
 
 ## Autores
 
-*   **Tu Nombre** - *Trabajo inicial* - [TuNombreDeUsuario](https://github.com/TuNombreDeUsuario)
+*   **Victor Alex Alcantara Peña** - *Trabajo inicial* - (https://github.com/victoralexalcantara)
 
 ## Licencia
 
