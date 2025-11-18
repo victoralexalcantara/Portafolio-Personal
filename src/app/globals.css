@@ -1,0 +1,172 @@
+/*
+  Este es el archivo principal de estilos.
+  Aquí definimos los estilos globales que se aplican en toda la aplicación.
+  Usamos Tailwind CSS, que es una librería que nos da clases ya hechas para no escribir tanto CSS.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  En esta sección '@layer base' definimos variables de CSS para nuestros colores.
+  Tener los colores como variables nos permite cambiarlos fácilmente en un solo lugar
+  y también nos ayuda a crear un tema oscuro y uno claro.
+*/
+@layer base {
+  :root {
+    --background: 220 10% 9%; /* Antique Anthracite */
+    --foreground: 0 0% 98%; /* Pure White */
+    --card: 220 13% 13%; /* Charcoal */
+    --card-foreground: 0 0% 98%;
+    --popover: 220 13% 13%; /* Charcoal */
+    --popover-foreground: 0 0% 98%;
+    --primary: 45 100% 51%; /* Gold */
+    --primary-foreground: 220 10% 9%;
+    --secondary: 220 12% 15%; /* Dark Charcoal */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 11% 18%; /* Slate Gray */
+    --muted-foreground: 200 7% 55%;
+    --accent: 0 0% 98%; /* White */
+    --accent-foreground: 220 10% 9%;
+    --destructive: 359 80% 56%; /* Tomato Red */
+    --destructive-foreground: 0 0% 98%;
+    --success: 145 63% 42%; /* Emerald Green */
+    --success-foreground: 0 0% 98%;
+    --border: 220 9% 20%; /* Gunmetal */
+    --input: 220 8% 18%; /* Graphite */
+    --ring: 45 100% 51%; /* Gold */
+  }
+
+  .dark {
+    --background: 220 10% 9%; /* Antique Anthracite */
+    --foreground: 0 0% 98%; /* Pure White */
+    --card: 220 13% 13%; /* Charcoal */
+    --card-foreground: 0 0% 98%;
+    --popover: 220 13% 13%; /* Charcoal */
+    --popover-foreground: 0 0% 98%;
+    --primary: 45 100% 51%; /* Gold */
+    --primary-foreground: 220 10% 9%;
+    --secondary: 220 12% 15%; /* Dark Charcoal */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 11% 18%; /* Slate Gray */
+    --muted-foreground: 200 7% 55%;
+    --accent: 0 0% 98%; /* White */
+    --accent-foreground: 220 10% 9%;
+    --destructive: 359 80% 56%; /* Tomato Red */
+    --destructive-foreground: 0 0% 98%;
+    --success: 145 63% 42%; /* Emerald Green */
+    --success-foreground: 0 0% 98%;
+    --border: 220 9% 20%; /* Gunmetal */
+    --input: 220 8% 18%; /* Graphite */
+    --ring: 45 100% 51%; /* Gold */
+  }
+}
+
+/*
+  En esta otra sección '@layer base' definimos estilos base para elementos HTML.
+*/
+@layer base {
+  * {
+    /* Hacemos que todos los elementos usen el color de borde que definimos. */
+    @apply border-border;
+  }
+  html {
+    /*
+      'scroll-pt-20' añade un padding arriba al hacer scroll a un ancla (#).
+      Así el header no tapa el contenido. 'scroll-smooth' hace que el scroll sea suave.
+    */
+    @apply scroll-pt-20 scroll-smooth;
+  }
+  body {
+    /* Aplicamos el color de fondo y de texto al cuerpo de la página. */
+    @apply bg-background text-foreground;
+  }
+  section {
+    /*
+      Estilos por defecto para todas las secciones: ancho completo,
+      ancho máximo de '6xl', centrado, con padding horizontal y vertical.
+    */
+    @apply w-full max-w-6xl mx-auto px-4 md:px-8 py-20 md:py-28;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    /* Aplicamos la fuente para titulares a todos los encabezados. */
+    @apply font-headline;
+  }
+}
+
+/*
+  ¡Aquí empieza la magia para los círculos animados!
+  'keyframes' nos permite definir los pasos de una animación.
+*/
+@keyframes blob-anim {
+  /* La animación empieza en el 0%. */
+  0% {
+    /*
+      'transform' nos deja mover, rotar o escalar elementos.
+      Aquí movemos el círculo a su posición inicial (0, 0) y lo escalamos a su tamaño normal (1).
+    */
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  /* A un tercio de la animación (33%). */
+  33% {
+    /* Movemos el círculo a una nueva posición y lo hacemos un poco más grande (escala 1.1). */
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  /* A la mitad de la animación (50%) */
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  /* A dos tercios de la animación (66%). */
+  66% {
+    /* Lo movemos a otra posición y lo encogemos un poco. */
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  /* La animación termina y vuelve a empezar. */
+  100% {
+    /* Lo devolvemos a su posición y tamaño originales para que el bucle sea perfecto. */
+    transform: translate(0px, 0px) scale(1);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+/* Animación para el texto con degradado */
+@keyframes gradient-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animación de máquina de escribir */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@layer utilities {
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent;
+    background-size: 200% auto;
+    animation: gradient-anim 3s ease-in-out infinite;
+  }
+
+  .animate-typing {
+    @apply overflow-hidden whitespace-nowrap;
+    animation: typing 3.5s steps(40, end);
+  }
+}

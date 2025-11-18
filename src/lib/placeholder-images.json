@@ -1,0 +1,28 @@
+{
+  "placeholderImages": [
+    {
+      "id": "profile",
+      "description": "Victor Alcantara's profile picture.",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E03AQGbuocGfBJvTw/profile-displayphoto-scale_400_400/B4EZqPOG0JIIAg-/0/1763339433231?e=1764806400&v=beta&t=Z_nLqYXJbSFiNUqjyq09-r2NRxkl6R8ATbtxBrZ6SQ0",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "task-management",
+      "description": "A web application showing a list of tasks.",
+      "imageUrl": "https://images.unsplash.com/photo-1759884247146-b6cba3d92341?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0YXNrJTIwbGlzdHxlbnwwfHx8fDE3NjMyODE0MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "task list"
+    },
+    {
+      "id": "rest-api",
+      "description": "Code on a screen representing a backend API.",
+      "imageUrl": "https://images.unsplash.com/photo-1666930398504-e747d9155071?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzZXJ2ZXIlMjBjb2RlfGVufDB8fHx8MTc2MzIzMDI0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "server code"
+    },
+    {
+      "id": "portfolio",
+      "description": "A screenshot of a personal portfolio website.",
+      "imageUrl": "https://images.unsplash.com/photo-1559028012-481c04fa702d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3ZWJzaXRlJTIwZGVzaWdufGVufDB8fHx8MTc2MzI2OTA3NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website design"
+    }
+  ]
+}
