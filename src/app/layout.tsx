@@ -27,8 +27,8 @@ const firaCode = Fira_Code({
 // Aquí definimos los metadatos de la página, como el título y la descripción.
 // ¡Esto es muy importante para que Google nos encuentre!
 export const metadata: Metadata = {
-  title: "VictorCodex | Software Development",
-  description: 'Portfolio of Victor Alex Alcantara, a Full Stack Developer specializing in scalable web applications.',
+  title: "Victor Alex Alcantara | Software Development",
+  description: 'Portafolio de Victor Alex Alcantara, desarrollador Full Stack especializado en aplicaciones web escalables.',
 };
 
 // Este es el "Layout" principal, es como la plantilla que envuelve toda nuestra aplicación.
