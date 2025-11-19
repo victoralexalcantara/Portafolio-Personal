@@ -79,7 +79,7 @@ export default function Footer() {
               isInView ? 'animate-typing' : 'opacity-0'
             )}
           >
-            Diseñado y desarrollado con pasión.
+            Diseñado y desarrollado con 😁 pasión.
           </p>
         </div>
       </div>
