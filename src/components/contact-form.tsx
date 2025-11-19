@@ -2,6 +2,7 @@
 
 // Importamos las herramientas que necesitamos de React.
 import React, { useEffect, useRef, useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 // 'useForm' de 'react-hook-form' nos ayuda a manejar el estado del formulario.
 import { useForm } from 'react-hook-form';
 // 'zodResolver' conecta 'react-hook-form' con 'zod' para validar los datos.
@@ -44,6 +45,17 @@ const initialState = {
   message: '',
   isSuccess: false,
 };
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+ 
+  return (
+    <Button type="submit" disabled={pending} className="w-full">
+      {pending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+      Enviar Mensaje
+    </Button>
+  );
+}
 
 // Este es nuestro componente de React.
 export default function ContactForm() {
@@ -109,10 +121,6 @@ export default function ContactForm() {
     }
   }, [state, form, toast]);
 
-
-  // Sacamos el 'formState' del hook 'form' para saber si se está enviando.
-  const {formState} = form;
-
   // El JSX que se va a renderizar.
   return (
     // El componente 'Form' de ShadCN envuelve todo y nos da el contexto del formulario.
@@ -166,12 +174,7 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        {/* El botón de envío. Lo deshabilitamos mientras se está enviando. */}
-        <Button type="submit" disabled={formState.isSubmitting} className="w-full">
-          {/* Si se está enviando, mostramos el icono de carga. */}
-          {formState.isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-          Enviar Mensaje
-        </Button>
+       <SubmitButton />
       </form>
     </Form>
   );
